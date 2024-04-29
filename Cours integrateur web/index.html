@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Algeria Tourisme</title>
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="design/style.css">
+</head>
+
+<body class="locked">
+
+
+    <div id="overlay" class="overlay">
+        <div class="box">
+            <h2>Page d'accueil verrouillée</h2>
+            <p>Veuillez entrer le code d'accès :</p>
+            <input type="password" id="password">
+            <button onclick="checkPassword()">Valider</button>
+            <!-- Message pour informer le client sur l'achat du site Internet -->
+            <div class="message">
+                <p>Pour votre entreprise, l'achat de ce site Internet est une opportunité à ne pas manquer ! <br><br>
+                    Découvrez comment l'acquérir pour seulement 500 €. <br>Payment en 2 fois possible <br><br>
+                    Cliquez ci-dessous pour obtenir toutes les informations sur l'achat de ce site internet : <br><br>
+                    <button
+                        onclick="window.location.href='mailto:harbi.a@laposte.net?subject=Demande d\'information pour acheter le site web&body=Je souhaite acheter le site web pour mon entreprise'"
+                        style="background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 8px;">Demande d'information</button>
+                </p>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <!-- CONTENEUR -->
+    <section id="bienvenue">
+        <!-- EN-TETE -->
+        <div class="conteneur">
+            <header>
+                Algeria Tourisme
+                <span id="slogan">Explore the Wonders in a Land Defined by Light and Contrasts</span>
+            </header>
+        </div>
+    </section>
+
+    <!-- NAV -->
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="apropos.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- CONTENU -->
+    <section class="contenu conteneur">
+
+        <!-- TOP -->
+        <section>
+            <h1 class="top"
+                style="font-size: 36px; font-weight: bold; color: #2078c1; text-align: center; margin-bottom: 20px;">Top
+                destinations</h1>
+            <p id="top" style="font-size: 18px; color: #555; text-align: center; line-height: 1.5;">Choose your future
+                destination
+                from our selection of the most requested cities by our customers</p>
+
+            <section id="flexbox-ville">
+                <a href="http://" target="_blank" rel="noopener noreferrer" id="ouargla" class="ville">Ouargla</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" id="alger" class="ville">Alger</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" id="tlemcen" class="ville">Tlemcen</a>
+                <a href="https://www.algerie360.com/transport-ferroviaire-le-train-express-touggourt-alger-inaugure-aujourdhui/"
+                    target="_blank" rel="noopener noreferrer" id="chelia" class="ville">Chelia
+                </a>
+            </section>
+
+            <!-- EN VOIR PLUS  -->
+
+        </section>
+
+    </section>
+
+
+
+    <!-- PIED DE PAGE  -->
+    <footer class="contenu" id="flexbox-foot">
+
+        <div id="logo-foot">
+            <img src="/image/Flag_map_of_Algeria.svg (1).png" alt="flag Algeria"> 2023 © Algeria Tourisme
+        </div>
+        <div class="en-voir-plus">
+            <a href="" id="voir">En voir plus <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M9 9a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1M5 2c2 1 15 8.25 15 8.25s1.46.81 1.25 2c-.16.93-1.75 1.75-1.75 1.75l-9 5S8 20 8 18v-5s0-1 1-1s1 1 1 1v3.5l6.5-3.5s.81-.35.81-.85S16 11 16 11L6 5S4.5 4 4.5 6v12s.03 1.42.96.94c1.33-.69 1.65-.51 1.98.16c.52 1.07-.48 1.61-.48 1.61L4 22.25S2 23 2 21V4c0-3 3-2 3-2z"
+                        fill="#888888" />
+                </svg></a>
+
+        </div>
+    </footer>
+
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "041087") {
+                document.body.classList.remove('locked');
+                document.getElementById("overlay").style.display = "none";
+            } else {
+                alert("Code d'accès incorrect. Veuillez réessayer.");
+            }
+        }
+
+        // Fonction pour empêcher le clic droit
+        function disableRightClick(event) {
+            // Empêche la propagation de l'événement de clic droit
+            event.preventDefault();
+        }
+
+        // Écoute l'événement de clic droit sur le document entier
+        document.addEventListener("contextmenu", disableRightClick);
+    </script>
+
+
+</body>
+
+</html>
